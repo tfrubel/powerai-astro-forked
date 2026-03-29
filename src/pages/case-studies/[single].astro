@@ -1,0 +1,43 @@
+---
+import Base from "@/layouts/Base.astro";
+import FeaturedCaseStudy from "@/components/FeaturedCaseStudy";
+import MainContainer from "@/components/MainContainer";
+import MDXContent from "@/helpers/MDXContent";
+import config from "@/config/config.json";
+import { getSinglePage } from "@/lib/contentParser";
+
+const { case_studies_folder: _csf } = config.settings;
+
+export async function getStaticPaths() {
+  const caseStudies = await getSinglePage("case-studies");
+  return caseStudies.map((study: any) => ({
+    params: { single: study.slug },
+    props: { caseStudy: study },
+  }));
+}
+
+const { caseStudy } = Astro.props;
+const { frontmatter, content } = caseStudy;
+const { title, meta_title, description, image } = frontmatter;
+---
+
+<Base title={title} meta_title={meta_title} description={description} image={image}>
+  <section>
+    <MainContainer>
+      <div class="container-padding-x container-padding-y pb-14">
+        <FeaturedCaseStudy data={caseStudy} hideButton disableLink client:visible />
+      </div>
+    </MainContainer>
+  </section>
+  <section>
+    <MainContainer>
+      <div class="container-padding-x py-12">
+        <div class="lg:w-3/5 mx-auto">
+          <div class="content">
+            <MDXContent content={content} client:load />
+          </div>
+        </div>
+      </div>
+    </MainContainer>
+  </section>
+</Base>

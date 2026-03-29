@@ -1,0 +1,32 @@
+---
+import Base from "@/layouts/Base.astro";
+import MainContainer from "@/components/MainContainer";
+import MDXContent from "@/helpers/MDXContent";
+import PageHeader from "@/partials/PageHeader";
+import { getSinglePage } from "@/lib/contentParser";
+
+export async function getStaticPaths() {
+  const integrations = await getSinglePage("integrations");
+  return integrations.map((integration: any) => ({
+    params: { single: integration.slug },
+    props: { integration },
+  }));
+}
+
+const { integration } = Astro.props;
+const { frontmatter, content } = integration;
+const { title, meta_title, description, image, page_header } = frontmatter;
+---
+
+<Base title={title} meta_title={meta_title} description={description} image={image}>
+  <PageHeader page_header={page_header} client:load />
+  <section>
+    <MainContainer>
+      <div class="lg:w-4/5 mx-auto container-padding-y container-padding-x">
+        <div class="content">
+          <MDXContent content={content} client:load />
+        </div>
+      </div>
+    </MainContainer>
+  </section>
+</Base>

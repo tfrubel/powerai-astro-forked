@@ -1,0 +1,48 @@
+{
+  "site": {
+    "title": "Power AI",
+    "base_url": "https://powerai.example.com",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_width": "137",
+    "logo_height": "46",
+    "logo_text": "Power AI"
+  },
+
+  "settings": {
+    "sticky_header": true,
+    "pagination": 3,
+    "summary_length": 200,
+    "blog_folder": "blog",
+    "case_studies_folder": "case-studies",
+    "career_folder": "careers"
+  },
+  "params": {
+    "contact_form_action": "#",
+    "apply_form_action": "#",
+    "newsletter_form_action": "#",
+    "footer_text": "Own traditional and AI search with a powerful platform",
+    "mail": "contact@powerai.com",
+    "phone": "(+1) 165-320-0102",
+    "copyright": "Designed And Developed by [Sitepins](https://sitepins.com)"
+  },
+
+  "navigation_button": {
+    "enable": true,
+    "label": "Contact",
+    "link": "/contact"
+  },
+
+  "google_tag_manager": {
+    "enable": false,
+    "gtm_id": "GTM-XXXXXX"
+  },
+
+  "metadata": {
+    "meta_author": "Sitepins",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Next Boilerplate"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "Features",
+      "url": "/features"
+    },
+    {
+      "name": "Pages",
+      "url": "",
+      "hasChildren": true,
+      "mega_menu": {
+        "mega_menu_title": "Resources",
+        "page_title": "Legal",
+        "company_groups": [
+          [
+            {
+              "name": "Pricing",
+              "url": "/pricing",
+              "description": "View our pricing plans",
+              "icon": "HiOutlineBriefcase"
+            },
+            {
+              "name": "Changelog",
+              "url": "/changelog",
+              "description": "Latest updates and fixes",
+              "icon": "HiOutlineBriefcase"
+            },
+            {
+              "name": "Integrations",
+              "url": "/integrations",
+              "description": "Connect your favorite tools",
+              "icon": "HiOutlineBriefcase"
+            }
+          ],
+          [
+            {
+              "name": "Blog",
+              "url": "/blog",
+              "description": "Read our latest articles",
+              "icon": "HiOutlineBriefcase"
+            },
+            {
+              "name": "Case Study",
+              "url": "/case-studies",
+              "description": "See success stories",
+              "icon": "HiOutlineBriefcase"
+            },
+            {
+              "name": "Careers",
+              "url": "/careers",
+              "description": "Join our growing team",
+              "icon": "HiOutlineBriefcase"
+            }
+          ]
+        ],
+
+        "page_links": [
+          {
+            "name": "Contact Us",
+            "url": "/contact",
+            "icon": "HiOutlineBriefcase"
+          },
+          {
+            "name": "Privacy Policy",
+            "url": "/privacy-policy",
+            "icon": "HiOutlineBriefcase"
+          },
+          {
+            "name": "Terms & Conditions",
+            "url": "/terms-of-service",
+            "icon": "HiOutlineBriefcase"
+          },
+          {
+            "name": "Changelog",
+            "url": "/changelog",
+            "icon": "HiOutlineBriefcase"
+          },
+          {
+            "name": "Elements",
+            "url": "/elements",
+            "icon": "HiOutlineBriefcase"
+          },
+          {
+            "name": "404",
+            "url": "/404",
+            "icon": "HiOutlineBriefcase"
+          }
+        ]
+      }
+    }
+  ],
+  "footer_company": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "About Us",
+      "url": "/about"
+    },
+    {
+      "name": "Features",
+      "url": "/features"
+    },
+    {
+      "name": "Pricing Plans",
+      "url": "/pricing"
+    },
+    {
+      "name": "Contact Us",
+      "url": "/contact"
+    }
+  ],
+  "footer_resource": [
+    {
+      "name": "Blog",
+      "url": "/blog"
+    },
+    {
+      "name": "Case Study",
+      "url": "/case-studies"
+    },
+    {
+      "name": "Integrations",
+      "url": "/integrations"
+    },
+
+    {
+      "name": "Careers",
+      "url": "/careers"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    }
+  ],
+  "footer_legal": [
+    {
+      "name": "Privacy Policy",
+      "url": "/privacy-policy"
+    },
+    {
+      "name": "Terms of Service",
+      "url": "/terms-of-service"
+    },
+    {
+      "name": "Changelog",
+      "url": "/changelog"
+    },
+    {
+      "name": "Help Desk",
+      "url": "/contact"
+    },
+    {
+      "name": "404 Page",
+      "url": "/404"
+    }
+  ]
+}

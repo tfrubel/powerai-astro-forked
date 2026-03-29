@@ -1,0 +1,37 @@
+---
+import Base from "@/layouts/Base.astro";
+import AnimatedButton from "@/components/AnimatedButton";
+import MainContainer from "@/components/MainContainer";
+import CTAShape from "@/components/shape/CTAShape";
+---
+
+<Base title="Page Not Found">
+  <section class="relative">
+    <MainContainer>
+      <div class="container-padding-x container-padding-y relative z-2">
+        <section class="relative flex w-full items-center justify-center overflow-hidden">
+          <div class="relative w-full max-w-297.5 overflow-hidden rounded-[30px] border border-white/6 bg-card/70">
+            <div class="relative m-5 overflow-hidden rounded-3xl bg-[#1a1c1c]/10">
+              <div class="relative m-5 flex items-center justify-center rounded-[18px] border border-white/6 bg-card/70 py-16 md:py-24">
+                <div class="flex flex-col items-center gap-8 px-4 text-center">
+                  <p class="text-[32px] font-semibold leading-10 text-white/90">Ooops...</p>
+                  <div class="flex items-end gap-2.5">
+                    <p class="text-2xl font-semibold leading-8 text-white">Error</p>
+                    <h1 class="bg-linear-to-b from-secondary to-primary bg-clip-text text-[clamp(80px,15vw,220px)] text-transparent">404</h1>
+                  </div>
+                  <p class="text-[32px] font-semibold leading-10 text-white">Page Not Found!</p>
+                  <AnimatedButton href="/" classNames="btn bg-gradient-dark" client:load>
+                    Go Home
+                  </AnimatedButton>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </MainContainer>
+    <div class="absolute -z-10 bottom-0 left-1/2 -translate-x-1/2">
+      <CTAShape client:load />
+    </div>
+  </section>
+</Base>
