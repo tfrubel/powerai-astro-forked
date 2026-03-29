@@ -46,12 +46,19 @@
 - 📄 **Regular Pages** — Elements, Privacy Policy, Terms of Service
 - 🚫 **404** — Custom not found page
 
+## 🔗 Integrations
+
+- astro/react
+- astro/sitemap
+- astro/tailwind
+- Cloudflare Workers (optional deployment)
+
 ## 🚀 Getting Started
 
 ### 📦 Dependencies
 
 - astro v5.15+
-- node v25.0+
+- node v22.0+
 - yarn v1.22+
 - tailwind v4+
 

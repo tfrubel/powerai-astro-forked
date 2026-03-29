@@ -6,11 +6,13 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"node scripts/themeGenerator.js --watch\" \"node scripts/jsonGenerator.js && astro dev\"",
+    "dev": "concurrently \"node scripts/themeGenerator.js --watch\" \"astro dev\"",
     "build": "node scripts/themeGenerator.js && node scripts/jsonGenerator.js && astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "format": "prettier -w ./src"
+    "format": "prettier -w ./src",
+    "deploy:cf-workers": "npm run build && wrangler deploy",
+    "preview:cf-workers": "npm run build && wrangler dev"
   },
   "dependencies": {
     "@astrojs/check": "0.9.7",
@@ -46,6 +48,7 @@
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwind-bootstrap-grid": "^7.0.0",
     "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "^4.73.0"
   }
 }
