@@ -7,7 +7,7 @@
 <p align=center> If you find this project useful, please give it a ⭐ to show your support.</p>
 
 <p align=center>
-  <a href="https://powerai-astro.teamosishq.workers.dev/">
+  <a href="https://powerai-astro.pages.dev/">
     <img src="https://img.shields.io/badge/Live%20Demo-View%20Site-blue?style=for-the-badge&logo=cloudflare" alt="Live Demo"/>
   </a>
 </p>

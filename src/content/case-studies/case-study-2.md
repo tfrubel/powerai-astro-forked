@@ -3,7 +3,7 @@ title: "Revolutionizing E-commerce with Personalized AI Recommendations"
 meta_title: ""
 description: "How we helped an e-commerce giant increase conversion rates by 150% using AI-powered product recommendations"
 date: 2024-02-10T05:00:00Z
-image: "/images/about-banner.png"
+image: "/images/case-studies/case-study-2.png"
 logo: "/images/trusted-clients/logo-1.png"
 review_video: "https://www.youtube.com/watch?v=A4mqzgFbmjI"
 featured: false

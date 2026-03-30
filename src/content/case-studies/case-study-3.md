@@ -3,7 +3,7 @@ title: "Optimizing Supply Chain with Predictive Analytics"
 meta_title: ""
 description: "How we helped a manufacturing company reduce inventory costs by 35% using AI-powered predictive analytics"
 date: 2024-03-05T05:00:00Z
-image: "/images/about-banner.png"
+image: "/images/case-studies/case-study-3.png"
 logo: "/images/trusted-clients/logo-1.png"
 featured: false
 draft: false

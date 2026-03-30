@@ -3,7 +3,7 @@ title: "Transforming Healthcare with AI-Powered Diagnostics"
 meta_title: ""
 description: "How we helped a leading healthcare provider implement AI diagnostics to improve patient outcomes by 40%"
 date: 2024-01-15T05:00:00Z
-image: "/images/about-banner.png"
+image: "/images/case-studies/case-study-1.png"
 logo: "/images/trusted-clients/logo-1.png"
 review_video: "https://www.youtube.com/watch?v=A4mqzgFbmjI"
 featured: true

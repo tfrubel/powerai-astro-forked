@@ -3,7 +3,7 @@ title: "Enhancing Customer Service with AI Chatbots"
 meta_title: ""
 description: "How we helped a telecommunications company reduce support costs by 60% while improving customer satisfaction"
 date: 2024-03-20T05:00:00Z
-image: "/images/about-banner.png"
+image: "/images/case-studies/case-study-4.png"
 logo: "/images/trusted-clients/logo-1.png"
 featured: false
 draft: false
