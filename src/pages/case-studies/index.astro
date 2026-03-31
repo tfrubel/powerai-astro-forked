@@ -1,14 +1,14 @@
 ---
 import Base from "@/layouts/Base.astro";
-import CaseStudyCard from "@/components/CaseStudyCard";
+import CaseStudyCard from "@/components/CaseStudyCard.astro";
 import FeaturedCaseStudy from "@/components/FeaturedCaseStudy";
-import MainContainer from "@/components/MainContainer";
-import Pagination from "@/components/Pagination";
+import MainContainer from "@/components/MainContainer.astro";
+import Pagination from "@/components/Pagination.astro";
 import config from "@/config/config.json";
 import { getListPage, getSinglePage } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
-import CallToAction from "@/partials/CallToAction";
-import PageHeader from "@/partials/PageHeader";
+import CallToAction from "@/partials/CallToAction.astro";
+import PageHeader from "@/partials/PageHeader.astro";
 
 const { case_studies_folder, pagination } = config.settings;
 
@@ -24,7 +24,7 @@ const featuredCaseStudy = sortedCaseStudies.filter((study: any) => study.frontma
 ---
 
 <Base title={title} meta_title={meta_title} description={description} image={image}>
-  <PageHeader page_header={page_header} client:load>
+  <PageHeader page_header={page_header}>
     {featuredCaseStudy && <FeaturedCaseStudy data={featuredCaseStudy} client:visible />}
   </PageHeader>
   <section>
@@ -33,7 +33,7 @@ const featuredCaseStudy = sortedCaseStudies.filter((study: any) => study.frontma
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2.5 mb-10">
           {currentCaseStudies.map((study: any) => (
             <div>
-              <CaseStudyCard data={study} client:visible />
+              <CaseStudyCard data={study} />
             </div>
           ))}
         </div>
@@ -41,5 +41,5 @@ const featuredCaseStudy = sortedCaseStudies.filter((study: any) => study.frontma
       </div>
     </MainContainer>
   </section>
-  <CallToAction data={callToAction} client:visible />
+  <CallToAction data={callToAction} />
 </Base>

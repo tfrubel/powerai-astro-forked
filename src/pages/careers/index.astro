@@ -1,10 +1,10 @@
 ---
 import Base from "@/layouts/Base.astro";
-import CallToAction from "@/partials/CallToAction";
+import CallToAction from "@/partials/CallToAction.astro";
 import FAQ from "@/partials/FAQ";
-import Gallery from "@/partials/Gallery";
-import PageHeader from "@/partials/PageHeader";
-import WhyChooseUs from "@/partials/WhyChooseUs";
+import Gallery from "@/partials/Gallery.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import WhyChooseUs from "@/partials/WhyChooseUs.astro";
 import CardShape from "@/components/shape/CardShape";
 import OpenPositions from "@/partials/OpenPositions";
 import config from "@/config/config.json";
@@ -22,7 +22,7 @@ const openPositions = data.frontmatter.open_positions;
 ---
 
 <Base title={title} meta_title={meta_title} description={description} image={image}>
-  <PageHeader page_header={page_header} client:load>
+  <PageHeader page_header={page_header}>
     <div class="border border-border/6 bg-card/60 rounded-4xl p-2.5">
       <CardShape client:load>
         <img
@@ -35,7 +35,7 @@ const openPositions = data.frontmatter.open_positions;
       </CardShape>
     </div>
   </PageHeader>
-  <WhyChooseUs data={our_value} client:visible />
+  <WhyChooseUs data={our_value} />
   {openPositions?.enable && (
     <OpenPositions
       badge={openPositions.badge}
@@ -44,7 +44,7 @@ const openPositions = data.frontmatter.open_positions;
       client:visible
     />
   )}
-  {gallery && <Gallery data={gallery} client:visible />}
+  {gallery && <Gallery data={gallery} />}
   <FAQ data={faq} client:visible />
-  <CallToAction data={callToAction} client:visible />
+  <CallToAction data={callToAction} />
 </Base>

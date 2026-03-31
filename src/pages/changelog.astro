@@ -1,9 +1,9 @@
 ---
 import Base from "@/layouts/Base.astro";
-import CallToAction from "@/partials/CallToAction";
-import PageHeader from "@/partials/PageHeader";
-import MainContainer from "@/components/MainContainer";
-import Badge from "@/components/Badge";
+import CallToAction from "@/partials/CallToAction.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import MainContainer from "@/components/MainContainer.astro";
+import Badge from "@/components/Badge.astro";
 import theme from "@/config/theme.json";
 import { getListPage } from "@/lib/contentParser";
 
@@ -14,7 +14,7 @@ const primaryColor = theme?.colors?.default?.theme_color?.primary || "#8F2FFE";
 ---
 
 <Base title={title} meta_title={meta_title} description={description} image={image}>
-  <PageHeader page_header={page_header} client:load />
+  <PageHeader page_header={page_header} />
 
   {changelog_list && changelog_list.length > 0 && (
     <section>
@@ -72,5 +72,5 @@ const primaryColor = theme?.colors?.default?.theme_color?.primary || "#8F2FFE";
     </section>
   )}
 
-  <CallToAction data={callToAction} client:visible />
+  <CallToAction data={callToAction} />
 </Base>

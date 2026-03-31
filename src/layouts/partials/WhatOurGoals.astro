@@ -1,0 +1,58 @@
+---
+import SectionHeader from "@/components/SectionHeader.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+interface Props {
+  data: any;
+}
+const { data } = Astro.props;
+const { badge, title, image, mission, vision } = data;
+---
+
+<section class="overflow-hidden">
+  <div class="main-container">
+    <div class="container">
+      <div class="container-padding-y container-padding-x">
+        <SectionHeader title={title} badge={badge} />
+        <div class="grid lg:grid-cols-2 gap-2.5 items-center">
+          <!-- Left: image -->
+          <div id={`wog-left-${Math.random().toString(36).slice(2,8)}`} style="opacity:0" class="border border-border/6 bg-card rounded-3xl p-2.5 h-full">
+            <img src={image} width="800" height="600" class="w-full rounded-3xl object-cover h-full" alt="goals" />
+          </div>
+          <!-- Right: mission + vision -->
+          <div id={`wog-right-${Math.random().toString(36).slice(2,8)}`} style="opacity:0" class="flex flex-col gap-2.5">
+            <!-- Mission -->
+            <div class="border border-border/6 bg-gradient-dark rounded-3xl p-8">
+              <div class="flex items-center gap-4 mb-6">
+                <img src={mission.icon} alt="mission icon" width="32" height="32" />
+                <h3 class="text-h5 font-medium">{mission.title}</h3>
+              </div>
+              <p class="text-gray" set:html={markdownify(mission.content).__html} />
+            </div>
+            <!-- Vision -->
+            <div class="border border-border/6 bg-gradient-dark rounded-3xl p-8">
+              <div class="flex items-center gap-4 mb-6">
+                <img src={vision.icon} alt="vision icon" width="32" height="32" />
+                <h3 class="text-h5 font-medium">{vision.title}</h3>
+              </div>
+              <p class="text-gray" set:html={markdownify(vision.content).__html} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { animateMini as animate, inView } from "motion";
+  document.querySelectorAll<HTMLElement>('[id^="wog-left-"]').forEach((el) => {
+    inView(el, () => {
+      animate(el, { opacity: [0, 1], transform: ["translateX(-30px)", "translateX(0)"] }, { duration: 0.5, ease: "easeInOut" });
+    }, { margin: "0px", amount: 0.05 });
+  });
+  document.querySelectorAll<HTMLElement>('[id^="wog-right-"]').forEach((el) => {
+    inView(el, () => {
+      animate(el, { opacity: [0, 1], transform: ["translateX(30px)", "translateX(0)"] }, { duration: 0.5, ease: "easeInOut" });
+    }, { margin: "0px", amount: 0.05 });
+  });
+</script>

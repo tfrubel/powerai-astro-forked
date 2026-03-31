@@ -13,17 +13,17 @@
 
 const smooth = {
   duration: 0.5,
-  easing: "ease-in-out" as const,
+  ease: "easeInOut" as const,
 };
 
 const slow = {
   duration: 0.8,
-  easing: "ease-in-out" as const,
+  ease: "easeInOut" as const,
 };
 
 const verySlow = {
   duration: 1.2,
-  easing: "ease-in-out" as const,
+  ease: "easeInOut" as const,
 };
 
 export type VariantEntry = {
