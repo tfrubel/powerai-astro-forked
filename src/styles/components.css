@@ -88,7 +88,7 @@
 }
 
 .tab-nav {
-  @apply flex border-b border-border bg-gray m-0! list-none!;
+  @apply flex border-b border-border bg-border m-0! list-none!;
 }
 
 .tab-nav-item {
@@ -174,7 +174,7 @@
   @apply prose-li:text-text prose-ul:marker:text-primary! ;
   @apply prose-blockquote:rounded-lg prose-blockquote:border prose-blockquote:border-l-10 prose-blockquote:border-primary prose-blockquote:bg-card prose-blockquote:px-8 prose-blockquote:py-10 prose-blockquote:text-2xl prose-blockquote:not-italic prose-blockquote:text-text;
   @apply prose-table:relative prose-table:overflow-hidden prose-table:rounded-lg prose-table:before:absolute prose-table:before:left-0 prose-table:before:top-0 prose-table:before:h-full prose-table:before:w-full prose-table:before:rounded-[inherit] prose-table:before:border prose-table:before:border-border prose-table:before:content-[""];
-  @apply prose-thead:border-border prose-thead:bg-gray;
+  @apply prose-thead:border-border prose-thead:bg-border;
   @apply prose-th:relative prose-th:z-10 prose-th:px-4! prose-th:py-4.5! prose-th:text-text;
   @apply prose-tr:border-border;
   @apply prose-td:relative prose-td:z-10 prose-td:px-3! prose-td:py-4.5!;

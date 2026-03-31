@@ -1,14 +1,13 @@
 ---
 title: "Elements"
-meta_title: ""
-description: "this is meta description"
-image: ""
+meta_title: "Elements"
+description: "This page showcases various markdown and component elements for the PowerAI Astro documentation."
+image: "/images/og-image.png"
 draft: false
 page_header:
   title: "Elements"
-  subtitle: "This page is a collection of all the elements that you can use in your content. You can use these elements to create beautiful and engaging content for your website."
+  subtitle: "A comprehensive guide to all available markdown syntax and custom components used throughout this documentation."
 ---
-
 
 # Heading 1
 
@@ -58,11 +57,21 @@ Did you come here for something in particular or just general Riker-bashing? And
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
+[I'm a reference-style link][arbitrary case-insensitive reference text]
+
 [I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself].
 
 example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.themefisher.com
+[1]: https://gethugothemes.com
+[link text itself]: https://www.getjekyllthemes.com
 
 ---
 
@@ -128,8 +137,8 @@ window.addEventListener("load", (e) => {
 
 ### Button
 
-<Button label="Solid" link="#" style="solid"/>
-<Button label="Outline" link="#" style="outline"/>
+<Button label="Button" link="#" style="solid" />
+<Button label="Button Outline" link="#" style="outline" />
 
 ---
 
@@ -141,33 +150,26 @@ window.addEventListener("load", (e) => {
 
 ### Notice
 
-<Notice type="note">
-  This is a simple note.
-</Notice>
+<Notice type="note">This is a simple note.</Notice>
 
-<Notice type="tip">
-  This is a simple note.
-</Notice>
+<Notice type="tip">This is a simple note.</Notice>
 
-<Notice type="info">
-  This is a simple note.
-</Notice>
+<Notice type="info">This is a simple note.</Notice>
 
-<Notice type="warning">
-  This is a simple note.
-</Notice>
+<Notice type="warning">This is a simple note.</Notice>
 
 ---
 
 ### Tab
 
-<Tabs>
+<Tabs client:load>
 
 <Tab name="Tab 1">
 
 #### Did you come here for something in particular?
 
 Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf.
+
 </Tab>
 
 <Tab name="Tab 2">
@@ -177,6 +179,7 @@ Did you come here for something in particular or just general Riker-bashing? And
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
 </Tab>
 
 <Tab name="Tab 3">
@@ -186,6 +189,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+
 </Tab>
 
 </Tabs>
@@ -202,35 +206,23 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 ---
 
-### Collapse
+### Accordion
 
-<Accordion title="Why should you need to do this?">
+<Accordion client:load title="Why should you need to do this?">
 
-- This is a thing.
-- This is a thing.
-- This is a thing.
-- This is a thing.
-- This is a thing.
+Our system continuously monitors for unusual activity. If any suspicious actions are detected, we alert you immediately so that you can take action to protect your account. This proactive approach helps to prevent potential security breaches before they happen
 
 </Accordion>
 
-<Accordion title="How can I adjust Horizontal centering">
+<Accordion client:load title="How can I adjust Horizontal centering">
 
-- This is a thing.
-- This is a thing.
-- This is a thing.
-- This is a thing.
-- This is a thing.
+All sensitive data is encrypted using advanced encryption methods both in transit and at rest. This ensures that your information is securely stored and cannot be accessed without proper authorization, giving you peace of mind.
 
 </Accordion>
 
-<Accordion title="Should you use Negative margin?">
+<Accordion client:load title="Should you use Negative margin?">
 
-- This is a thing.
-- This is a thing.
-- This is a thing.
-- This is a thing.
-- This is a thing.
+We take the security and privacy of your financial data very seriously. Our platform employs industry-standard encryption protocols to safeguard your information during transmission and storage.
 
 </Accordion>
 
@@ -238,16 +230,16 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 ### Image
 
-![image](/images/banner.png)
+![image](/images/og-image.png)
 
 ---
 
 ### Youtube video
 
-<Youtube id="C0DPdy98e4c" title="Play:Youtube"/>
+<Youtube client:load id="K4TOrB7at0Y" title="Youtube Video Test Title" />
 
 ---
 
 ### Custom video
 
-<Video width="100%" src="https://www.w3schools.com/html/mov_bbb.mp4" />
+<Video width="100%" src="https://assets.mixkit.co/videos/52452/52452-720.mp4" />
