@@ -1,0 +1,61 @@
+---
+// Tabs shortcode - collects Tab children server-side, renders nav + panels
+---
+
+<div class="tab" data-tabs-container>
+  <ul class="tab-nav" role="tablist" data-tab-nav>
+    <!-- Populated by script after hydration -->
+  </ul>
+  <div data-tab-panels>
+    <slot />
+  </div>
+</div>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    document.querySelectorAll<HTMLElement>("[data-tabs-container]").forEach((container) => {
+      const nav = container.querySelector<HTMLElement>("[data-tab-nav]");
+      const panelsWrapper = container.querySelector<HTMLElement>("[data-tab-panels]");
+      if (!nav || !panelsWrapper) return;
+
+      const panels = panelsWrapper.querySelectorAll<HTMLElement>("[data-tab-panel]");
+      if (!panels.length) return;
+
+      // Build nav items
+      nav.innerHTML = "";
+      panels.forEach((panel, i) => {
+        const name = panel.getAttribute("data-tab-name") || `Tab ${i + 1}`;
+        const li = document.createElement("li");
+        li.className = `tab-nav-item${i === 0 ? " active" : ""}`;
+        li.textContent = name;
+        li.setAttribute("role", "tab");
+        li.setAttribute("tabindex", i === 0 ? "0" : "-1");
+        li.addEventListener("click", () => activateTab(container, i));
+        li.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") activateTab(container, i);
+          if (e.key === "ArrowRight") activateTab(container, (i + 1) % panels.length);
+          if (e.key === "ArrowLeft") activateTab(container, (i - 1 + panels.length) % panels.length);
+        });
+        nav.appendChild(li);
+      });
+
+      // Show first tab
+      panels.forEach((panel, i) => {
+        panel.className = i === 0 ? "tab-content block px-5" : "hidden";
+      });
+    });
+  });
+
+  function activateTab(container: HTMLElement, index: number) {
+    const navItems = container.querySelectorAll<HTMLElement>(".tab-nav-item");
+    const panels = container.querySelectorAll<HTMLElement>("[data-tab-panel]");
+    navItems.forEach((li, i) => {
+      li.classList.toggle("active", i === index);
+      li.setAttribute("tabindex", i === index ? "0" : "-1");
+    });
+    panels.forEach((panel, i) => {
+      panel.className = i === index ? "tab-content block px-5" : "hidden";
+    });
+    navItems[index]?.focus();
+  }
+</script>
