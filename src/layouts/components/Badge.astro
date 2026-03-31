@@ -1,5 +1,5 @@
 ---
-
+// Badge — converted from Badge.tsx (motion-only, no React state)
 ---
 
 <div
@@ -14,9 +14,13 @@
 
 <script>
   import { animateMini as animate, inView } from "motion";
-  document.querySelectorAll<HTMLElement>('[id^="badge-"]').forEach((el) => {
-    inView(el, () => {
-      animate(el, { opacity: [0, 1], transform: ["scale(0.8)", "scale(1)"] }, { duration: 0.5, ease: "easeInOut" });
+  function initBadgeAnimations() {
+    document.querySelectorAll<HTMLElement>('[id^="badge-"]').forEach((el) => {
+      el.style.opacity = "0";
+      inView(el, () => {
+        animate(el, { opacity: [0, 1], transform: ["scale(0.8)", "scale(1)"] }, { duration: 0.5, ease: "easeInOut" });
+      });
     });
-  });
+  }
+  document.addEventListener("astro:page-load", initBadgeAnimations);
 </script>

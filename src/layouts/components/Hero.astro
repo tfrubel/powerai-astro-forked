@@ -64,11 +64,20 @@ const { data } = Astro.props;
 
 <script>
   import { animateMini as animate } from "motion";
-  const smooth = { ease: "easeInOut" as const };
-  animate("#hero-badge",   { opacity: [0, 1], transform: ["translateY(-20px)", "translateY(0)"] }, { ...smooth, duration: 0.5, delay: 0.2 });
-  animate("#hero-title",   { opacity: [0, 1], transform: ["translateY(20px)",  "translateY(0)"] }, { ...smooth, duration: 0.8, delay: 0.3 });
-  animate("#hero-content", { opacity: [0, 1], transform: ["translateY(20px)",  "translateY(0)"] }, { ...smooth, duration: 0.5, delay: 0.5 });
-  animate("#hero-buttons", { opacity: [0, 1], transform: ["translateY(20px)",  "translateY(0)"] }, { ...smooth, duration: 0.5, delay: 0.6 });
-  animate("#hero-image",   { opacity: [0, 1], transform: ["translateY(40px)",  "translateY(0)"] }, { ...smooth, duration: 1.2, delay: 0.4 });
-  animate("#hero-shape",   { opacity: [0, 1], transform: ["scale(0.8)",        "scale(1)"]      }, { ...smooth, duration: 1.2, delay: 0.2 });
+  function initHero() {
+    const smooth = { ease: "easeInOut" as const };
+    const badge = document.getElementById("hero-badge");
+    const title = document.getElementById("hero-title");
+    const content = document.getElementById("hero-content");
+    const buttons = document.getElementById("hero-buttons");
+    const heroImage = document.getElementById("hero-image");
+    const heroShape = document.getElementById("hero-shape");
+    if (badge)     { badge.style.opacity     = "0"; animate(badge,     { opacity: [0, 1], transform: ["translateY(-20px)", "translateY(0)"] }, { ...smooth, duration: 0.5, delay: 0.2 }); }
+    if (title)     { title.style.opacity     = "0"; animate(title,     { opacity: [0, 1], transform: ["translateY(20px)",  "translateY(0)"] }, { ...smooth, duration: 0.8, delay: 0.3 }); }
+    if (content)   { content.style.opacity   = "0"; animate(content,   { opacity: [0, 1], transform: ["translateY(20px)",  "translateY(0)"] }, { ...smooth, duration: 0.5, delay: 0.5 }); }
+    if (buttons)   { buttons.style.opacity   = "0"; animate(buttons,   { opacity: [0, 1], transform: ["translateY(20px)",  "translateY(0)"] }, { ...smooth, duration: 0.5, delay: 0.6 }); }
+    if (heroImage) { heroImage.style.opacity = "0"; animate(heroImage, { opacity: [0, 1], transform: ["translateY(40px)",  "translateY(0)"] }, { ...smooth, duration: 1.2, delay: 0.4 }); }
+    if (heroShape) { heroShape.style.opacity = "0"; animate(heroShape, { opacity: [0, 1], transform: ["scale(0.8)",        "scale(1)"]      }, { ...smooth, duration: 1.2, delay: 0.2 }); }
+  }
+  document.addEventListener("astro:page-load", initHero);
 </script>

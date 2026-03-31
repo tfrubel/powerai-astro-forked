@@ -72,17 +72,22 @@ const { footer_company, footer_legal, footer_resource } = menu;
 
 <script>
   import { animateMini as animate, inView } from "motion";
-  const smooth = { duration: 0.5, ease: "easeInOut" as const };
-  const footerMain = document.getElementById("footer-main");
-  if (footerMain) {
-    inView(footerMain, () => {
-      animate(footerMain, { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] }, smooth);
-    }, { margin: "0px", amount: 0.05 });
+  function initFooter() {
+    const smooth = { duration: 0.5, ease: "easeInOut" as const };
+    const footerMain = document.getElementById("footer-main");
+    if (footerMain) {
+      footerMain.style.opacity = "0";
+      inView(footerMain, () => {
+        animate(footerMain, { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] }, smooth);
+      }, { margin: "0px", amount: 0.05 });
+    }
+    const footerBottom = document.getElementById("footer-bottom");
+    if (footerBottom) {
+      footerBottom.style.opacity = "0";
+      inView(footerBottom, () => {
+        animate(footerBottom, { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] }, smooth);
+      }, { margin: "0px", amount: 0.05 });
+    }
   }
-  const footerBottom = document.getElementById("footer-bottom");
-  if (footerBottom) {
-    inView(footerBottom, () => {
-      animate(footerBottom, { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] }, smooth);
-    }, { margin: "0px", amount: 0.05 });
-  }
+  document.addEventListener("astro:page-load", initFooter);
 </script>
