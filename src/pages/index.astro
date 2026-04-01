@@ -6,7 +6,7 @@ import CallToAction from "@/partials/CallToAction.astro";
 import EssentialFeatures from "@/partials/EssentialFeatures.astro";
 import FAQ from "@/partials/FAQ";
 import Integration from "@/partials/Integration";
-import KeyFeatures from "@/partials/KeyFeatures";
+import KeyFeatures from "@/partials/KeyFeatures.astro";
 import Pricing from "@/partials/Pricing";
 import Testimonials from "@/partials/Testimonials";
 import TrustedClients from "@/partials/TrustedClients";
@@ -30,7 +30,7 @@ const { banner } = homepage.frontmatter;
 <Base>
   <Hero data={banner} />
   <TrustedClients data={trusted_clients} client:load />
-  <KeyFeatures data={key_features} client:load />
+  <KeyFeatures data={key_features} />
   <Statistics data={statistics} client:visible />
   <EssentialFeatures data={essential_features} />
   <WhyChooseUs data={whyChooseUs} />
