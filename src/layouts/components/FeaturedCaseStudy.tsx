@@ -3,7 +3,6 @@ import type { CaseStudy } from "@/types/index";
 import ImageFallback from "@/helpers/ImageFallback";
 import { plainify } from "@/lib/utils/textConverter";
 import { useState } from "react";
-import { createPortal } from "react-dom";
 import { motion } from "motion/react";
 import { cardVariants } from "@/lib/animations";
 import VideoModal from "./VideoModal";
@@ -25,7 +24,6 @@ const FeaturedCaseStudy = ({
   const excerpt = description || plainify(data.content || "");
 
   return (
-    <>
     <motion.div
       initial="initial"
       whileInView="visible"
@@ -172,18 +170,14 @@ const FeaturedCaseStudy = ({
         </div>
       </div>
 
+      {/* Video Modal */}
+      {showModal && review_video && (
+        <VideoModal
+          videoUrl={review_video}
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </motion.div>
-
-      {/* Video Modal - portaled to body to escape transform context */}
-      {showModal && review_video &&
-        createPortal(
-          <VideoModal
-            videoUrl={review_video}
-            onClose={() => setShowModal(false)}
-          />,
-          document.body,
-        )}
-    </>
   );
 };
 

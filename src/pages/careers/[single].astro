@@ -39,7 +39,7 @@ const jobInfoCards = [
             {title}
           </h1>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 w-full max-w-7xl">
-            {jobInfoCards.map((card) => (
+            {jobInfoCards.map((card, index) => (
               <div class="bg-card/30 backdrop-blur-xl border border-border/6 rounded-3xl p-8 flex flex-col gap-7 items-center text-center">
                 <div class="size-14 rounded-2xl bg-card/70 border border-border/10 flex items-center justify-center relative overflow-hidden">
                   <svg class="size-6 text-text relative z-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -53,6 +53,62 @@ const jobInfoCards = [
                     {card.icon === "location" && (
                       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                     )}
+                  </svg>
+                  <svg
+                    class="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none"
+                    width="56"
+                    height="38"
+                    viewBox="0 0 56 38"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <g filter={`url(#filter0_f_${index})`}>
+                      <circle
+                        cx="28"
+                        cy="40"
+                        r="20"
+                        fill={`url(#paint0_linear_${index})`}
+                        fill-opacity="0.3"
+                      />
+                    </g>
+                    <defs>
+                      <filter
+                        id={`filter0_f_${index}`}
+                        x="-12"
+                        y="0"
+                        width="80"
+                        height="80"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="BackgroundImageFix"
+                          result="shape"
+                        />
+                        <feGaussianBlur
+                          stdDeviation="10"
+                          result="effect1_foregroundBlur"
+                        />
+                      </filter>
+                      <linearGradient
+                        id={`paint0_linear_${index}`}
+                        x1="8"
+                        y1="60"
+                        x2="48"
+                        y2="60"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#9A4DFE" />
+                        <stop offset="1" stop-color="#E87CFF" />
+                      </linearGradient>
+                    </defs>
                   </svg>
                 </div>
                 <div class="flex flex-col gap-3">

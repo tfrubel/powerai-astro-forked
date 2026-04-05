@@ -1,5 +1,6 @@
 
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 
 function getYouTubeId(url: string): string | null {
   const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
@@ -31,7 +32,7 @@ export default function VideoModal({ videoUrl, onClose }: VideoModalProps) {
     }
   };
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
       onClick={handleBackdropClick}
@@ -69,6 +70,7 @@ export default function VideoModal({ videoUrl, onClose }: VideoModalProps) {
           />
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
