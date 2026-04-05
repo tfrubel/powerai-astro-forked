@@ -84,19 +84,19 @@
 
 /* tab */
 .tab {
-  @apply overflow-hidden rounded-lg border border-border;
+  @apply overflow-hidden rounded-lg border border-border/20;
 }
 
 .tab-nav {
-  @apply flex border-b border-border bg-border m-0! list-none!;
+  @apply flex border-b border-border/20 bg-white/8 m-0! list-none!;
 }
 
 .tab-nav-item {
-  @apply cursor-pointer border-b-[3px] border-border py-2 text-lg text-text opacity-80 my-0! px-8!;
+  @apply cursor-pointer border-b-[3px] border-transparent py-2 text-lg text-text opacity-80 my-0! px-8!;
 }
 
 .tab-nav-item.active {
-  @apply border-b-[3px] border-dark opacity-100;
+  @apply border-b-[3px] border-primary opacity-100;
 }
 
 .tab-content {
@@ -117,7 +117,7 @@
 
 /* accordion */
 .accordion {
-  @apply mb-6 overflow-hidden rounded-lg border border-border bg-dark;
+  @apply mb-6 overflow-hidden rounded-lg border border-border/20 bg-dark;
 }
 
 .accordion-header {
@@ -173,10 +173,10 @@
   @apply prose-pre:rounded-lg prose-pre:bg-dark;
   @apply prose-li:text-text prose-ul:marker:text-primary! ;
   @apply prose-blockquote:rounded-lg prose-blockquote:border prose-blockquote:border-l-10 prose-blockquote:border-primary prose-blockquote:bg-card prose-blockquote:px-8 prose-blockquote:py-10 prose-blockquote:text-2xl prose-blockquote:not-italic prose-blockquote:text-text;
-  @apply prose-table:relative prose-table:overflow-hidden prose-table:rounded-lg prose-table:before:absolute prose-table:before:left-0 prose-table:before:top-0 prose-table:before:h-full prose-table:before:w-full prose-table:before:rounded-[inherit] prose-table:before:border prose-table:before:border-border prose-table:before:content-[""];
-  @apply prose-thead:border-border prose-thead:bg-border;
+  @apply prose-table:relative prose-table:overflow-hidden prose-table:rounded-lg prose-table:before:absolute prose-table:before:left-0 prose-table:before:top-0 prose-table:before:h-full prose-table:before:w-full prose-table:before:rounded-[inherit] prose-table:before:border prose-table:before:border-border/20 prose-table:before:content-[""];
+  @apply prose-thead:border-border/20 prose-thead:bg-white/8;
   @apply prose-th:relative prose-th:z-10 prose-th:px-4! prose-th:py-4.5! prose-th:text-text;
-  @apply prose-tr:border-border;
+  @apply prose-tr:border-border/20;
   @apply prose-td:relative prose-td:z-10 prose-td:px-3! prose-td:py-4.5!;
 }
 
