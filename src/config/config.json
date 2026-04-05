@@ -13,7 +13,7 @@
 
   "settings": {
     "sticky_header": true,
-    "pagination": 3,
+    "pagination": 9,
     "summary_length": 200,
     "blog_folder": "blog",
     "case_studies_folder": "case-studies",
