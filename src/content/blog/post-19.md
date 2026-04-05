@@ -1,7 +1,7 @@
 ---
 title: "API Security Best Practices for Modern Applications"
 meta_title: "API Security Best Practices"
-description: "Protect your APIs with these essential security measures"
+description: "APIs are a prime attack surface—and securing them properly requires more than just adding an API key. This guide covers authentication with OAuth and JWTs, rate limiting, input validation, CORS configuration, and other critical security measures to protect your APIs in production."
 date: 2023-10-10T08:45:00Z
 image: "/images/blog/blog-19.png"
 category: "Technology"

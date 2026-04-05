@@ -1,7 +1,7 @@
 ---
 title: "Micro-Frontends: Scaling Frontend Development"
 meta_title: "Micro-Frontends Architecture"
-description: "How micro-frontend architecture enables independent team development"
+description: "Micro-frontend architecture breaks monolithic frontends into independently deployable modules owned by separate teams. This post explores the core patterns, tooling options like Module Federation, and the trade-offs involved in adopting micro-frontends at scale."
 date: 2023-09-22T15:30:00Z
 image: "/images/blog/blog-18.png"
 category: "React"

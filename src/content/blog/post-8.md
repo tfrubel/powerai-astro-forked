@@ -1,7 +1,7 @@
 ---
 title: "Introduction to GraphQL: Beyond REST APIs"
 meta_title: "Introduction to GraphQL"
-description: "Learn how GraphQL can improve your API development experience"
+description: "GraphQL offers a flexible, efficient alternative to REST by letting clients request exactly the data they need in a single query. Learn how to design schemas, write queries and mutations, and integrate GraphQL into your stack to build more performant and maintainable APIs."
 date: 2022-11-03T10:30:00Z
 image: "/images/blog/blog-8.png"
 category: "Technology"

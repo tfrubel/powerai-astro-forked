@@ -1,7 +1,7 @@
 ---
 title: "Tailwind CSS: Utility-First Framework for Rapid UI Development"
 meta_title: "Tailwind CSS Guide"
-description: "How Tailwind CSS can accelerate your UI development workflow"
+description: "Tailwind CSS revolutionizes the way developers style interfaces by providing a rich set of utility classes that compose directly in your markup. Discover how its utility-first approach, JIT compiler, and design token system can dramatically speed up your UI development workflow."
 date: 2023-04-22T08:15:00Z
 image: "/images/blog/blog-13.png"
 category: "CSS"

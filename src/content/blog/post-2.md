@@ -1,7 +1,7 @@
 ---
 title: "The Future of Artificial Intelligence in Web Development"
 meta_title: "AI in Web Development"
-description: "Exploring how artificial intelligence is transforming web development practices"
+description: "Artificial intelligence is rapidly reshaping web development—from intelligent code assistants to AI-powered UX personalization. Explore the key trends, tools, and real-world use cases that are defining the next generation of web applications."
 date: 2022-05-15T08:30:00Z
 image: "/images/blog/blog-2.png"
 category: "Technology"

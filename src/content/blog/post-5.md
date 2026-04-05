@@ -1,7 +1,7 @@
 ---
 title: "Modern CSS Techniques for Better Web Design"
 meta_title: "Modern CSS Techniques"
-description: "Explore modern CSS techniques that will elevate your web design skills"
+description: "Modern CSS has evolved far beyond simple styling—with features like Container Queries, CSS Grid subgrid, and custom properties enabling layouts and effects that once required JavaScript. Learn how to leverage these powerful techniques to create stunning, responsive web experiences."
 date: 2022-08-18T09:00:00Z
 image: "/images/blog/blog-5.png"
 category: "CSS"

@@ -1,7 +1,7 @@
 ---
 title: "Serverless Architecture: When and How to Use It"
 meta_title: "Serverless Architecture"
-description: "Understanding serverless computing and when it makes sense for your project"
+description: "Serverless architecture lets you build and deploy backend logic without managing servers, scaling automatically with demand and charging only for what you use. Learn when serverless is the right choice, how to structure functions effectively, and which pitfalls to avoid in production."
 date: 2023-05-18T14:00:00Z
 image: "/images/blog/blog-14.png"
 category: "DevOps"

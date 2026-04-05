@@ -1,7 +1,7 @@
 ---
 title: "Building Real-Time Applications with WebSockets"
 meta_title: "WebSockets Guide"
-description: "How to implement real-time features using WebSockets"
+description: "WebSockets enable full-duplex, low-latency communication between clients and servers—essential for chat apps, live dashboards, and collaborative tools. This guide covers the WebSocket protocol, server-side setup, client integration, and handling edge cases like reconnection and scaling."
 date: 2023-02-20T11:00:00Z
 image: "/images/blog/blog-11.png"
 category: "Technology"

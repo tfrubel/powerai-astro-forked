@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with Docker for Web Developers"
 meta_title: "Docker for Web Developers"
-description: "A practical guide to using Docker in your web development workflow"
+description: "Docker simplifies development by packaging your application and its dependencies into portable containers that run consistently across any environment. This practical guide covers the core concepts, essential commands, and real-world workflows every web developer needs to know."
 date: 2022-10-12T08:00:00Z
 image: "/images/blog/blog-7.png"
 category: "DevOps"

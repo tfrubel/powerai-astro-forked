@@ -1,7 +1,7 @@
 ---
 title: "Progressive Web Apps: Bridging the Gap Between Web and Native"
 meta_title: "Progressive Web Apps"
-description: "Building PWAs that deliver native-like experiences on the web"
+description: "Progressive Web Apps combine the reach of the web with the capabilities of native apps—offering offline support, push notifications, and fast load times. Learn how to implement service workers, manifest files, and caching strategies to deliver a seamless, app-like experience on any device."
 date: 2023-06-25T10:45:00Z
 image: "/images/blog/blog-15.png"
 category: "Technology"

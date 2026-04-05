@@ -1,7 +1,7 @@
 ---
 title: "Testing Strategies for Modern JavaScript Applications"
 meta_title: "JavaScript Testing Strategies"
-description: "A comprehensive guide to testing approaches for JavaScript apps"
+description: "A solid testing strategy is essential for maintaining code quality and shipping with confidence in modern JavaScript applications. This guide covers unit testing with Jest, component testing with Testing Library, end-to-end testing with Playwright, and how to balance coverage with development speed."
 date: 2023-07-30T09:30:00Z
 image: "/images/blog/blog-16.png"
 category: "Technology"
