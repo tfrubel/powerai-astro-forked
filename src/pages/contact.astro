@@ -1,6 +1,6 @@
 ---
 import Base from "@/layouts/Base.astro";
-import { ContactForm } from "@/components/ContactForm";
+import ContactForm from "@/layouts/components/ContactForm.astro";
 import CallToAction from "@/partials/CallToAction.astro";
 import FAQ from "@/partials/FAQ";
 import PageHeader from "@/partials/PageHeader.astro";
@@ -14,7 +14,7 @@ const callToAction = await getListPage("sections/call-to-action.md");
 
 <Base title={title} meta_title={meta_title} description={description} image={image}>
   <PageHeader page_header={page_header}>
-    <ContactForm contact_info={contact_info} client:load />
+    <ContactForm contact_info={contact_info} />
   </PageHeader>
   <FAQ data={faq} client:visible />
   <CallToAction data={callToAction} />
