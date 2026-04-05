@@ -49,20 +49,13 @@ const TrustedClients = ({ data }: { data: PageData }) => {
     >
       {brand_logos.client_list.map((logo, index) => (
         <div key={`${listKey}-${index}`} className="shrink-0">
-          <a
-            href={logo?.link}
-            aria-label={`Visit ${logo?.link || "partner website"}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ImageFallback
-              src={logo?.logo}
-              alt={`Partner logo ${index + 1}`}
-              className="w-45 grayscale opacity-70 transition-all duration-300 hover:opacity-100 hover:grayscale-0"
-              width="190"
-              height="40"
-            />
-          </a>
+          <ImageFallback
+            src={logo?.logo}
+            alt={`Partner logo ${index + 1}`}
+            className="w-45 grayscale opacity-70"
+            width="190"
+            height="40"
+          />
         </div>
       ))}
     </div>
