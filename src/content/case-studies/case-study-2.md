@@ -6,6 +6,7 @@ date: 2024-02-10T05:00:00Z
 image: "/images/case-studies/case-study-2.png"
 logo: "/images/trusted-clients/logo-1.png"
 review_video: "https://www.youtube.com/watch?v=A4mqzgFbmjI"
+category: "E-commerce"
 featured: false
 draft: false
 ---

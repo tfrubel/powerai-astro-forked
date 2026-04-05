@@ -1,5 +1,5 @@
 .header {
-  @apply bg-body py-5 xl:py-7.5 border-b border-border/6;
+  @apply bg-body/80 backdrop-blur-md py-5 border-b border-border/6;
 }
 
 /* navbar items */

@@ -5,6 +5,7 @@ description: "How we helped a telecommunications company reduce support costs by
 date: 2024-03-20T05:00:00Z
 image: "/images/case-studies/case-study-4.png"
 logo: "/images/trusted-clients/logo-1.png"
+category: "Customer Service"
 featured: false
 draft: false
 ---

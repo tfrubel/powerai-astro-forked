@@ -4,7 +4,7 @@ meta_title: "TypeScript Guide"
 description: "Master TypeScript with this comprehensive guide covering all essential concepts"
 date: 2022-07-10T14:45:00Z
 image: "/images/blog/blog-4.png"
-category: "TypeScript"
+category: "Technology"
 author:
   name: "Sarah Williams"
   designation: "Tech Lead"

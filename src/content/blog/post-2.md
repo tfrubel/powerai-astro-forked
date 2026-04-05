@@ -4,7 +4,7 @@ meta_title: "AI in Web Development"
 description: "Exploring how artificial intelligence is transforming web development practices"
 date: 2022-05-15T08:30:00Z
 image: "/images/blog/blog-2.png"
-category: "AI & Technology"
+category: "Technology"
 author:
   name: "Jane Smith"
   designation: "AI Researcher"

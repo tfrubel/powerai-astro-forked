@@ -1,7 +1,9 @@
 ---
+import BlogCard from "@/components/BlogCard.astro";
 import MainContainer from "@/components/MainContainer.astro";
 import Share from "@/components/Share.astro";
 import config from "@/config/config.json";
+import { getSinglePage } from "@/lib/contentParser";
 import dateFormat from "@/lib/utils/dateFormat";
 import readingTime from "@/lib/utils/readingTime";
 import { slug } from "github-slugger";
@@ -14,6 +16,11 @@ if (post.data.draft) return Astro.redirect("/404");
 const { Content, headings } = await render(post);
 const { title, description, image, author, category, date } = post.data;
 
+const allPosts = await getSinglePage("blog");
+const relatedPosts = allPosts
+  .filter((p: any) => p.slug !== post.id && p.frontmatter.category === category)
+  .slice(0, 3);
+
 const readTime = post.body ? readingTime(post.body) : "0 min";
 
 const toc: { level: number; text: string; slug: string }[] = [];
@@ -24,6 +31,7 @@ if (headings) {
     toc.push({ level, text, slug: headingSlug });
   }
 }
+
 ---
 
 <section>
@@ -130,3 +138,18 @@ if (headings) {
     </div>
   </MainContainer>
 </section>
+
+{relatedPosts.length > 0 && (
+  <section>
+    <MainContainer>
+      <div class="container-padding-x py-14">
+        <h2 class="font-primary font-semibold text-3xl text-text text-center mb-10">Related Blogs</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2.5">
+          {relatedPosts.map((relatedPost: any) => (
+            <BlogCard data={relatedPost} />
+          ))}
+        </div>
+      </div>
+    </MainContainer>
+  </section>
+)}

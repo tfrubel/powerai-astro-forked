@@ -4,7 +4,7 @@ meta_title: "Next.js 14 Features"
 description: "Discover the latest features and improvements in Next.js 14"
 date: 2022-09-05T11:30:00Z
 image: "/images/blog/blog-6.png"
-category: "Next.js"
+category: "Technology"
 author:
   name: "David Chen"
   designation: "Full Stack Developer"
