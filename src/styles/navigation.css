@@ -22,6 +22,10 @@
   @apply text-gray hover:text-primary   block p-3 cursor-pointer font-medium transition xl:px-2 xl:py-3;
 }
 
+.nav-link.active {
+  @apply text-primary;
+}
+
 .nav-dropdown {
   @apply mr-0;
 }
@@ -40,6 +44,10 @@
 
 .nav-dropdown-link {
   @apply text-gray hover:text-primary block py-1 font-medium transition;
+}
+
+.nav-dropdown-link.active {
+  @apply text-primary;
 }
 
 .nav-mega-menu {

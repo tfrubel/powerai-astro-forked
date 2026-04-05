@@ -1,20 +1,20 @@
 
 import ImageFallback from "@/helpers/ImageFallback";
-import type { TrustedClientType } from "@/types/index";
+import type { LogoMarqueeType } from "@/types/index";
 import { motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 interface PageData {
   notFound?: boolean;
   content?: string;
-  frontmatter: TrustedClientType;
+  frontmatter: LogoMarqueeType;
 }
 
 const LOGO_GAP_PX = 72;
 const MARQUEE_SPEED_PX_PER_SECOND = 90;
 
 const TrustedClients = ({ data }: { data: PageData }) => {
-  const brand_logos = data.frontmatter;
+  const section = data.frontmatter;
   const groupRef = useRef<HTMLDivElement>(null);
   const [groupWidth, setGroupWidth] = useState(0);
 
@@ -30,9 +30,9 @@ const TrustedClients = ({ data }: { data: PageData }) => {
     return () => {
       window.removeEventListener("resize", updateGroupWidth);
     };
-  }, [brand_logos.client_list]);
+  }, [section.items]);
 
-  if (!brand_logos.client_list.length) {
+  if (!section.items.length) {
     return null;
   }
 
@@ -47,7 +47,7 @@ const TrustedClients = ({ data }: { data: PageData }) => {
       className="flex shrink-0 gap-18"
       aria-hidden={hidden}
     >
-      {brand_logos.client_list.map((logo, index) => (
+      {section.items.map((logo, index) => (
         <div key={`${listKey}-${index}`} className="shrink-0">
           <ImageFallback
             src={logo?.logo}

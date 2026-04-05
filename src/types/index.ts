@@ -74,7 +74,7 @@ export type Career = {
   content?: string;
 };
 
-export type Call_to_action = {
+export type CallToAction = {
   enable?: boolean;
   title: string;
   description: string;
@@ -87,10 +87,10 @@ export type Button = {
   link: string;
 };
 
-export type TrustedClientType = {
+export type LogoMarqueeType = {
   enable: boolean;
   title: string;
-  client_list: {
+  items: {
     name: string;
     logo: string;
     link?: string;

@@ -1,7 +1,7 @@
 ---
 enable: true
 title: Trusted by millions of users
-client_list:
+items:
   - name: Logo Client 1
     logo: /images/trusted-clients/logo-1.png
     link: "#"

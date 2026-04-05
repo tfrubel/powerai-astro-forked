@@ -6,9 +6,9 @@ import type { IntegrationType } from "@/types/index";
 import ImageFallback from "@/helpers/ImageFallback";
 
 const IntegrationList = ({
-  integration_list,
+  items,
 }: {
-  integration_list: IntegrationType[];
+  items: IntegrationType[];
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
@@ -17,11 +17,11 @@ const IntegrationList = ({
   const categories = [
     "All Categories",
     ...Array.from(
-      new Set(integration_list.map((item) => item.frontmatter.category)),
+      new Set(items.map((item) => item.frontmatter.category)),
     ),
   ];
 
-  const filteredList = integration_list.filter((integration) => {
+  const filteredList = items.filter((integration) => {
     const matchesSearch = integration.frontmatter.page_header.title
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
@@ -43,7 +43,7 @@ const IntegrationList = ({
               </span>
               <input
                 type="text"
-                placeholder={`Search ${integration_list.length} integrations...`}
+                placeholder={`Search ${items.length} integrations...`}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full bg-transparent py-4 pl-14 pr-6 text-lg text-text placeholder:text-gray focus:outline-none border-none ring-0"

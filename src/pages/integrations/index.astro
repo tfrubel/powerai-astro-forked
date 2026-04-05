@@ -8,14 +8,14 @@ import { getListPage, getSinglePage } from "@/lib/contentParser";
 
 const integrationIndex = await getListPage("integrations/-index.md");
 const { title, description, meta_title, image, page_header } = integrationIndex.frontmatter;
-const integrations_list = await getSinglePage("integrations");
+const integrationItems = await getSinglePage("integrations");
 const faq = await getListPage("sections/faq.md");
 const callToAction = await getListPage("sections/call-to-action.md");
 ---
 
 <Base title={title} meta_title={meta_title} description={description} image={image}>
   <PageHeader page_header={page_header} />
-  <IntegrationList integration_list={integrations_list} client:load />
+  <IntegrationList items={integrationItems} client:load />
   <FAQ data={faq} client:visible />
   <CallToAction data={callToAction} />
 </Base>
