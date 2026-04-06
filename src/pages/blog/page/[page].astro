@@ -41,8 +41,8 @@ const featuredPost = sortedPosts.filter((post: any) => post.frontmatter.featured
 ---
 
 <Base title={title} meta_title={meta_title} description={description} image={image}>
-  <PageHeader page_header={page_header} client:load>
-    {featuredPost && <FeaturedPost data={featuredPost} client:visible />}
+  <PageHeader page_header={page_header}>
+    {featuredPost && <FeaturedPost data={featuredPost} />}
   </PageHeader>
   <section>
     <MainContainer>
@@ -50,7 +50,7 @@ const featuredPost = sortedPosts.filter((post: any) => post.frontmatter.featured
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2.5 mb-10">
           {currentPosts.map((post: any) => (
             <div>
-              <BlogCard data={post} client:visible />
+              <BlogCard data={post} />
             </div>
           ))}
         </div>
