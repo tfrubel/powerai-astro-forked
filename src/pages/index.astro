@@ -29,7 +29,7 @@ const { banner } = homepage.frontmatter;
 
 <Base>
   <Hero data={banner} />
-  <TrustedClients data={trusted_clients} client:load />
+  <TrustedClients data={trusted_clients} client:visible />
   <KeyFeatures data={key_features} />
   <Statistics data={statistics} client:visible />
   <EssentialFeatures data={essential_features} />

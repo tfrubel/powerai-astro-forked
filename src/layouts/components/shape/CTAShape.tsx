@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useMemo } from "react";
+import React, { useMemo } from "react";
 import theme from "@/config/theme.json";
 
 /* ─── seeded deterministic RNG so particles are stable across renders ─── */
@@ -16,23 +16,6 @@ const CTAShape = () => {
   const secondaryColor =
     theme?.colors?.default?.theme_color?.secondary ?? "#E87CFF";
 
-  /* shimmer rect driven by rAF for butter-smooth 60fps movement */
-  const shimRef = useRef<SVGRectElement | null>(null);
-  useEffect(() => {
-    const el = shimRef.current;
-    if (!el) return;
-    let start: number | null = null;
-    let frame = 0;
-    const PERIOD = 4800;
-    const tick = (ts: number) => {
-      if (start === null) start = ts;
-      const t = ((ts - start) % PERIOD) / PERIOD;
-      el.setAttribute("x", String(-320 + t * 2160));
-      frame = requestAnimationFrame(tick);
-    };
-    frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, []);
 
   /* stable star field */
   const stars = useMemo(() => {
@@ -285,10 +268,12 @@ const CTAShape = () => {
         </linearGradient>
 
         <style>{`
-          @keyframes _oa_tw  { 0%,100%{opacity:var(--lo)} 50%{opacity:var(--hi)} }
-          @keyframes _oa_emb { 0%{transform:translateY(0);opacity:var(--op)} 78%{opacity:var(--op)} 100%{transform:translateY(calc(var(--rise) * -1px));opacity:0} }
+          @keyframes _oa_tw   { 0%,100%{opacity:var(--lo)} 50%{opacity:var(--hi)} }
+          @keyframes _oa_emb  { 0%{transform:translateY(0);opacity:var(--op)} 78%{opacity:var(--op)} 100%{transform:translateY(calc(var(--rise) * -1px));opacity:0} }
+          @keyframes _oa_shim { from{transform:translateX(0)} to{transform:translateX(2160px)} }
           ._oa_star { animation: _oa_tw  var(--dur) ease-in-out var(--del) infinite; }
           ._oa_emb  { animation: _oa_emb var(--dur) ease-in    var(--del) infinite; transform-box:fill-box; }
+          ._oa_shim_rect { animation: _oa_shim 4.8s linear infinite; }
         `}</style>
       </defs>
 
