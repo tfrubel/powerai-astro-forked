@@ -12,8 +12,8 @@ interface Props {
   decoding?: "async" | "auto" | "sync" | null | undefined;
   format?: "auto" | "avif" | "jpeg" | "png" | "svg" | "webp";
   fit?: "cover" | "contain" | "fill" | "none" | "scale-down";
-  fetchpriority?: "high" | "low" | "auto";
   class?: string;
+  fetchpriority?: "high" | "low" | "auto";
   style?: any;
 }
 
@@ -25,11 +25,11 @@ let {
   height,
   loading,
   decoding,
-  fetchpriority,
   class: className,
   format,
-  style,
   fit,
+  fetchpriority,
+  style,
 } = Astro.props;
 
 src = `/public${src}`;
@@ -58,9 +58,10 @@ const isValidPath = images[src] ? true : false;
       fit={fit ? fit : "contain"}
       decoding={decoding}
       class={className}
-      format={format}
-      style={style}
+      format={format || "webp"}
       fetchpriority={fetchpriority}
+      style={style}
+      quality={"mid"}
     />
   )
 }
