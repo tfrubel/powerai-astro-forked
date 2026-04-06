@@ -12,6 +12,7 @@ interface Props {
   decoding?: "async" | "auto" | "sync" | null | undefined;
   format?: "auto" | "avif" | "jpeg" | "png" | "svg" | "webp";
   fit?: "cover" | "contain" | "fill" | "none" | "scale-down";
+  fetchpriority?: "high" | "low" | "auto";
   class?: string;
   style?: any;
 }
@@ -24,6 +25,7 @@ let {
   height,
   loading,
   decoding,
+  fetchpriority,
   class: className,
   format,
   style,
@@ -58,6 +60,7 @@ const isValidPath = images[src] ? true : false;
       class={className}
       format={format}
       style={style}
+      fetchpriority={fetchpriority}
     />
   )
 }
