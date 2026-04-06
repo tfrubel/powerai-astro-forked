@@ -21,7 +21,6 @@ const { data } = Astro.props;
             data.badge?.enable && (
               <div
                 id="hero-badge"
-                style="opacity:0"
                 class="bg-gradient-secondary p-px rounded-full mb-2"
               >
                 <div class="px-1.5 py-1.75 bg-gradient-black-grid rounded-full flex items-center gap-2.5">
@@ -46,18 +45,16 @@ const { data } = Astro.props;
           <!-- TITLE -->
           <h1
             id="hero-title"
-            style="opacity:0"
             class="hero-text mb-4"
             set:html={markdownify(data.title).__html}
           />
           <!-- CONTENT -->
-          <p id="hero-content" style="opacity:0" class="text-lg sm:w-3/5">
+          <p id="hero-content" class="text-lg sm:w-3/5">
             {data.content}
           </p>
           <!-- BUTTONS -->
           <div
             id="hero-buttons"
-            style="opacity:0"
             class="mt-10 flex items-center gap-5 flex-wrap justify-center"
           >
             {
@@ -86,14 +83,13 @@ const { data } = Astro.props;
         <!-- IMAGE -->
         <div
           id="hero-image"
-          style="opacity:0"
           class="mt-30 bg-dark/45 backdrop-blur-2xl p-5 relative z-1"
         >
           <ImageMod
             src={data.image}
             alt="banner"
-            width={1260}
-            height={700}
+            width={1360}
+            height={800}
             fetchpriority="high"
             loading="eager"
             class="object-cover w-full h-auto"
@@ -106,7 +102,6 @@ const { data } = Astro.props;
   <!-- Hero Shape -->
   <div
     id="hero-shape"
-    style="opacity:0"
     class="absolute bottom-20 -z-1 left-1/2 -translate-x-1/2 pointer-events-none h-100 sm:h-150 lg:h-170 xl:h-210"
   >
     <HeroShape />
