@@ -211,7 +211,7 @@ const Pricing = ({
                               {plan.price?.monthly?.number}
                               <span className="text-base text-text-light">{plan.price?.monthly?.suffix}</span>
                             </h3>
-                            <h3 className="text-h2 price-tag inactive font-normal text-text" data-price-tag-yearly style={{ opacity: 0, position: 'absolute' }}>
+                            <h3 className="text-h2 price-tag inactive font-normal text-text" data-price-tag-yearly style={{ opacity: 0 }}>
                               <span className="text-text-light">{plan.price?.yearly?.prefix}</span>
                               {plan.price?.yearly?.number}
                               <span className="text-base text-text-light">{plan.price?.yearly?.suffix}</span>
@@ -326,7 +326,7 @@ const Pricing = ({
                           {plan.price?.monthly?.number}
                           <span className="text-base text-text-light">{plan.price?.monthly?.suffix}</span>
                         </h3>
-                        <h3 className="text-h2 price-tag inactive font-normal text-text" data-price-tag-yearly style={{ opacity: 0, position: 'absolute' }}>
+                        <h3 className="text-h2 price-tag inactive font-normal text-text" data-price-tag-yearly style={{ opacity: 0 }}>
                           <span className="text-text-light">{plan.price?.yearly?.prefix}</span>
                           {plan.price?.yearly?.number}
                           <span className="text-base text-text-light">{plan.price?.yearly?.suffix}</span>
