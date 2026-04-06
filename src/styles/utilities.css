@@ -3,8 +3,12 @@
 }
 
 /* form style */
+@utility form-control {
+  @apply mb-5;
+}
+
 @utility form-input {
-  @apply w-full rounded border-transparent bg-light px-6 py-4 text-text-dark placeholder:text-text-light focus:border-primary  focus:ring-transparent;
+  @apply w-full h-14 bg-white/5 px-8 py-4 text-base leading-6 text-text placeholder:text-gray outline-none font-normal border-none rounded-full;
 }
 
 @utility form-label {
