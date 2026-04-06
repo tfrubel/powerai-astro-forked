@@ -183,9 +183,9 @@ const Testimonials = ({ data }: { data: PageData }) => {
                             height={40}
                             className="h-10 object-contain mb-4"
                           />
-                          <h6 className=" text-text/70 text-xl mb-2 font-medium">
+                          <div className=" text-text/70 text-xl mb-2 font-medium">
                             {activeTestimonial.company.name}
-                          </h6>
+                          </div>
 
                           <div className="flex items-center gap-px mt-2">
                             {Array.from({ length: 5 }).map((_, index) => (
